@@ -1,23 +1,23 @@
 -- film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerlerin sıralanması 
 
-select distinct(replacement_cost) from film;
+SELECT DISTINCT(replacement_cost) FROM film;
 
 -- film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
 
-select count(distinct(replacement_cost)) from film;
+SELECT COUNT(DISTINCT(replacement_cost)) FROM film;
 
 -- film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
 
-select count(*) from film
-where title ~~ 'T%' and rating = 'G';
+SELECT COUNT(*) FROM film
+WHERE title ~~ 'T%' AND rating = 'G';
 
 -- country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
-select count(*) from country
-where country ~~ '_____' ;
+SELECT COUNT(*) FROM country
+WHERE country ~~ '_____' ;
 
 -- city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
 
-select count(*) from city
-where city ~~ 'R%r';
+SELECT COUNT(*) FROM city
+WHERE city ~~ 'R%r';
 
 
